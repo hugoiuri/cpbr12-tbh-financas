@@ -21,33 +21,37 @@ export default props => {
 
   return (
     <div>
-      <p><h2>Detalhes do contrato</h2></p>
-      <br />
-      <p><h3 >Status do Contrato: {dadosContrato.status}</h3></p>
+      <div className="area-page">
+        <div className="area-title">
+          <h2>Detalhes do contrato</h2>
+          <h3>Status do Contrato: {dadosContrato.status}</h3>
+        </div>
 
-      <div><b>Razão social:</b> {dadosContrato.txtRazaoSocial}</div>
-      <div><b>Modalidade:</b> {dadosContrato.txtDescricaoModalidade}</div>
-      <div><b>Tipo de contratação:</b> {dadosContrato.txtTipoContratacao}</div>
-      <div><b>Orgão:</b> {dadosContrato.codOrgao}</div>
-      <div><b>Objeto do contrato:</b> {dadosContrato.txtObjetoContrato}</div>
-      <div><b>Razão Social do Credor:</b> {dadosContrato.credores[0].txtRazaoSocial}</div>
-      <div><b>CPF / CNPJ do Credor:</b> {dadosContrato.credores[0].numCpfCnpj}</div>
-      <div><b>Código do Contrato:</b> {dadosContrato.code}</div>
-      <div><b>Código Original do Contrato:</b> {dadosContrato.numOriginalContrato}</div>
-      <div><b>Código do processo:</b> {dadosContrato.codProcesso}</div>
-      <div><b>Data de assinatura do contrato:</b> {dadosContrato.datAssinaturaContrato}</div>
-      <div><b>Data de vigência do contrato:</b> {dadosContrato.datVigencia}</div>
-      <div><b>Valor total:</b> {dadosContrato.valorTotal},00</div>
-      <div><b>Valor total empenhado:</b> {dadosContrato.valTotalEmpenhado},00</div>
-      <div><b>Valor liquidado:</b> {dadosContrato.valLiquidado},00</div>
-      <div><b>Valor pago:</b> {dadosContrato.valPago},00</div>
-      <div><b>Saldo empenhado:</b> {dadosContrato.saldoEmpenhado},00</div>
-      <div><b>Saldo liquidado:</b> {dadosContrato.saldoLiquidado},00</div>
-      <div><b>Media prevista:</b> {dadosContrato.mediaPrevista},00</div>
-      <div><b>Media empenhada:</b> {dadosContrato.mediaEmpenhada},00</div>
-      <div><b>Media Liquidado:</b> {dadosContrato.mediaLiquidado},00</div>
+        <div className="area-details">
+          <div className="field"><span className="label"> Razão social: </span> {dadosContrato.txtRazaoSocial}</div>
+          <div className="field"><span className="label"> Modalidade: </span> {dadosContrato.txtDescricaoModalidade}</div>
+          <div className="field"><span className="label"> Tipo de contratação: </span> {dadosContrato.txtTipoContratacao}</div>
+          <div className="field"><span className="label"> Orgão: </span> {dadosContrato.codOrgao}</div>
+          <div className="field"><span className="label"> Objeto do contrato: </span> {dadosContrato.txtObjetoContrato}</div>
+          <div className="field"><span className="label"> Razão Social do Credor: </span> {dadosContrato.credores[0].txtRazaoSocial}</div>
+          <div className="field"><span className="label"> CPF / CNPJ do Credor: </span> {dadosContrato.credores[0].numCpfCnpj}</div>
+          <div className="field"><span className="label"> Código do Contrato: </span> {dadosContrato.code}</div>
+          <div className="field"><span className="label"> Código Original do Contrato: </span> {dadosContrato.numOriginalContrato}</div>
+          <div className="field"><span className="label"> Código do processo: </span> {dadosContrato.codProcesso}</div>
+          <div className="field"><span className="label"> Data de assinatura do contrato: </span> {dadosContrato.datAssinaturaContrato}</div>
+          <div className="field"><span className="label"> Data de vigência do contrato: </span> {dadosContrato.datVigencia}</div>
+          <div className="field"><span className="label"> Valor total: </span> {dadosContrato.valorTotal},00</div>
+          <div className="field"><span className="label"> Valor total empenhado: </span> {dadosContrato.valTotalEmpenhado},00</div>
+          <div className="field"><span className="label"> Valor liquidado: </span> {dadosContrato.valLiquidado},00</div>
+          <div className="field"><span className="label"> Valor pago: </span> {dadosContrato.valPago},00</div>
+          <div className="field"><span className="label"> Saldo empenhado: </span> {dadosContrato.saldoEmpenhado},00</div>
+          <div className="field"><span className="label"> Saldo liquidado: </span> {dadosContrato.saldoLiquidado},00</div>
+          <div className="field"><span className="label"> Media prevista: </span> {dadosContrato.mediaPrevista},00</div>
+          <div className="field"><span className="label"> Media empenhada: </span> {dadosContrato.mediaEmpenhada},00</div>
+          <div className="field"><span className="label"> Media Liquidado: </span> {dadosContrato.mediaLiquidado},00</div>
+        </div>
+     </div>
     </div>
-
   );
 
 }
