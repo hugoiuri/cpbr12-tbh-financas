@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
+
+html, body *{
+  font-family: Roboto;
+}
+
+
+h1, h2, h3, h4, .navbar-brand, .d3plus-Rect-text * {
+  font-family: 'Roboto Condensed' !important;
+}
+
+h2 {
+  color: #0a3d62;
+}
+
+.area-page {
+  max-width: 1000px;
+  display: block;
+  margin: 30px auto;
+}
+
 .border {
   border: 1px solid black;
 }
@@ -28,4 +49,34 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.area-title {
+  padding: 20px;
+  border-bottom: solid 1px #333;
+  margin-bottom: 30px;
+}
+
+.area-details {
+  padding-left: 30px;
+}
+
+.navbar {
+  border-bottom: solid 1px #B71C0C;
+  background: #fff !important;
+  color:  #B71C0C !important;
+  border: none !important;
+  -webkit-box-shadow: 0px 2px 19px -8px rgba(0,0,0,0.39);
+  -moz-box-shadow: 0px 2px 19px -8px rgba(0,0,0,0.39);
+  box-shadow: 0px 2px 19px -8px rgba(0,0,0,0.39);
+}
+
+.navbar *{
+  color:  #B71C0C !important;
+  outline: none !important;
+}
+
+.navbar .navbar-brand {
+  text-align: center;
+  margin: 0 auto;
 }

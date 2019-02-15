@@ -40,16 +40,16 @@ class TreeMapView extends React.Component {
         fill: d => {
           if (d.status === 'Contrato vencido'
             || d.status === 'Contrato vencido com saldo') {
-            return 'red'
+            return '#3c6382' 
           }
   
           if (d.status === 'Contrato com empenho inferior ao previsto'
             || d.status === 'Contrato com pagamento em aberto'
             || d.status === 'Contrato com empenho superior ao previsto') {
-            return 'orange'
+            return '#fad390'
           }
   
-          return 'blue';
+          return '#E74C3C';
         }
       },
       legend: false
