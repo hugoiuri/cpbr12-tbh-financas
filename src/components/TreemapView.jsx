@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { Treemap } from 'd3plus-react'
 
-import data from '../database/db.json'
+import data from '../database/db2.json'
 
 class TreeMapView extends React.Component {
   state = {
@@ -38,8 +38,7 @@ class TreeMapView extends React.Component {
       },
       shapeConfig: {
         fill: d => {
-          if (d.status === 'Contrato vencido'
-            || d.status === 'Contrato vencido com saldo') {
+          if (d.status === 'Contrato vencido com saldo') {
             return 'red'
           }
   
