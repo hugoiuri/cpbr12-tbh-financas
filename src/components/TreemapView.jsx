@@ -9,7 +9,9 @@ class TreeMapView extends React.Component {
     methods: {
       data,
       size: d => d.value,
-      groupBy: d => `Contrato: ${d.id}`,
+      groupBy: d => d.numOriginalContrato != null
+      ? `Contrato: ${d.id} - Nº Original: ${d.numOriginalContrato}`
+      : `Contrato: ${d.id}`,
       tooltipConfig: {
         body: d => {
           var table = "<table class='tooltip-table'>";
@@ -19,16 +21,18 @@ class TreeMapView extends React.Component {
           table += `<tr><td class='title'>Orgão: </td><td class='data'>${d.codOrgao}</td></tr>`;
           table += `<tr><td class='title'>Tipo de Contratação: </td><td class='data'>${d.txtTipoContratacao}</td></tr>`;
           table += `<tr><td class='title'>Status: </td><td class='data'>${d.status}</td></tr>`;
-          table += `<tr><td class='title'>Valor Principal: </td><td class='data'>${d.value}</td></tr>`;
-          table += `<tr><td class='title'>Valor Liquidado: </td><td class='data'>${d.valLiquidado}</td></tr>`;
-          table += `<tr><td class='title'>Valor Pago: </td><td class='data'>${d.valPago}</td></tr>`;
+          table += `<tr><td class='title'>Valor Total: </td><td class='data'>${d.value}</td></tr>`;
+          table += `<tr><td class='title'>Saldo Empenhado: </td><td class='data'>${d.saldoEmpenhado}</td></tr>`;
+          table += `<tr><td class='title'>Saldo Liquidado: </td><td class='data'>${d.saldoLiquidado}</td></tr>`;
           table += '</table>';
           return table;
         },
         footer: d => {
           return "<sub class='tooltip-footer'>Dados fornecidos pela Prodam</sub>";
         },
-        title: d => `Contrato: ${d.id}`
+        title: d => d.numOriginalContrato != null
+          ? `Contrato: ${d.id}<br/>Nº Original: ${d.numOriginalContrato}`
+          : `Contrato: ${d.id}`
       },
       on: {
         click: d => {
